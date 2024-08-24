@@ -1,0 +1,18 @@
+export const MessagesMapping = {
+  '#1': 'User already exists',
+  '#2': 'Token not found',
+  '#3': 'Your credentials are not valid',
+  '#4': 'Account already verified',
+  '#5': 'Verification email sent successfully',
+  '#6': 'Account verified successfully',
+  '#7': 'Passwords do not match',
+  '#8': 'Password has been reset successfully',
+  '#9': 'User not found',
+  '#10': 'You have been logged in successfully',
+  '#11': 'Refresh token not found',
+  '#12': 'You have been logged out successfully',
+  '#13': 'You have been registered successfully',
+  '#14': 'No data found',
+  '#15': 'Invalid request',
+  '#16': 'You are not authorized to perform this action',
+};
