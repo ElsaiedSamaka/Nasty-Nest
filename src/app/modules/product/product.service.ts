@@ -1,11 +1,9 @@
 import mongoose, { Types } from 'mongoose';
 import slugify from 'slugify';
 
-import { BrandService } from '@modules/brand/brand.service';
 import { HistoryService } from '@modules/history/history.service';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { AwsS3Service } from '@shared/aws/aws.service';
-import { IAwsS3Response } from '@shared/aws/interfaces/aws.interface';
 import { MessagesMapping } from '@shared/messages-mapping';
 import { BaseService } from '@shared/services/base.service';
 
@@ -19,12 +17,6 @@ export class ProductService extends BaseService<ProductRepository> {
   constructor(
     protected readonly repository: ProductRepository,
     protected readonly awsService: AwsS3Service,
-    protected readonly imageService: ImageService,
-    protected readonly categoryService: CategoryService,
-    protected readonly brandService: BrandService,
-    protected readonly sizeService: SizeService,
-    protected readonly tagService: TagService,
-    protected readonly colorService: ColorService,
     protected readonly historyService: HistoryService,
   ) {
     super();

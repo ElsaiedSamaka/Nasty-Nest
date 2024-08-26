@@ -62,6 +62,9 @@ import { LoggerMiddleware } from '@shared/middlewares/http-logger.middleware';
               )}`,
               'MONGODB',
             );
+              connection.on('error', (err) => {
+                Logger.error('Database connection error:', err);
+              });
             return connection;
           },
         };

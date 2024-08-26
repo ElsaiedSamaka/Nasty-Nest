@@ -1,9 +1,3 @@
-import { BrandModule } from '@modules/brand/brand.module';
-import { CategoryModule } from '@modules/category/category.module';
-import { ColorModule } from '@modules/color/color.module';
-import { ImageModule } from '@modules/image/image.module';
-import { SizeModule } from '@modules/size/size.module';
-import { TagModule } from '@modules/tag/tag.module';
 import { UserModule } from '@modules/user/user.module';
 import { forwardRef, Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
@@ -18,13 +12,7 @@ import { HistoryModule } from '@modules/history/history.module';
 @Module({
   imports: [
     MongooseModule.forFeature([{ name: Product.name, schema: ProductSchema }]),
-    forwardRef(() => ImageModule),
     forwardRef(() => AwsModule),
-    forwardRef(() => CategoryModule),
-    forwardRef(() => ColorModule),
-    forwardRef(() => SizeModule),
-    forwardRef(() => BrandModule),
-    forwardRef(() => TagModule),
     forwardRef(() => UserModule),
     forwardRef(() => HistoryModule),
   ],

@@ -1,6 +1,5 @@
 import { Types } from 'mongoose';
 
-import { ImageService } from '@modules/image/image.service';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { AwsS3Service } from '@shared/aws/aws.service';
 import { IAwsS3Response } from '@shared/aws/interfaces/aws.interface';
@@ -16,7 +15,6 @@ export class UserService extends BaseService<UserRepository> {
   constructor(
     protected readonly repository: UserRepository,
     protected readonly awsService: AwsS3Service,
-    protected readonly imageService: ImageService,
   ) {
     super();
   }

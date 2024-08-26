@@ -7,8 +7,6 @@ import {
   Post,
   Put,
   Query,
-  UploadedFile,
-  UploadedFiles,
 } from '@nestjs/common';
 import {
   ApiBearerAuth,
@@ -29,7 +27,6 @@ import {
 import { AllowAnonymous } from '@shared/decorators/public.decorator';
 import { AuthUser } from '@shared/decorators/auth-user.decorator';
 import { Roles } from '@shared/decorators/roles.decorator';
-import { ENUM_FILE_TYPE } from '@shared/enums/file.enum';
 import { RoleTypeEnum } from '@shared/enums/role-type.enum';
 import { PaginationPipe } from '@shared/pipes/pagination.pipe';
 

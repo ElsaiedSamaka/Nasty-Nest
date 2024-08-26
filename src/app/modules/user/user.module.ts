@@ -1,7 +1,6 @@
 import bcrypt from 'bcryptjs';
 import { NextFunction } from 'express';
 
-import { ImageModule } from '@modules/image/image.module';
 import { forwardRef, Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AwsModule } from '@shared/aws/aws.module';
@@ -47,7 +46,6 @@ import { UserService } from './user.service';
       },
     ]),
     forwardRef(() => AwsModule),
-    forwardRef(() => ImageModule),
   ],
   providers: [UserService, UserRepository],
   controllers: [UserController],
